@@ -76,7 +76,7 @@ open class RecordButton : UIButton {
         self.drawButton()
     }
     
-    
+    //MARK: - drawButton
     fileprivate func drawButton() {
         
         self.backgroundColor = UIColor.clear
