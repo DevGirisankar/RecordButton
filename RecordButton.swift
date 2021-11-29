@@ -197,6 +197,7 @@ open class RecordButton : UIButton {
         self.buttonState = .recording
     }
     
+    //MARK: - didTouchUp
     @objc open func didTouchUp() {
         if(closeWhenFinished) {
             self.setProgress(1)
