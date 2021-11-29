@@ -116,7 +116,7 @@ open class RecordButton : UIButton {
         gradientMaskLayer.mask = progressLayer
         layer.insertSublayer(gradientMaskLayer, at: 0)
     }
-    
+    //MARK: -  setRecording
     fileprivate func setRecording(_ recording: Bool) {
         
         let duration: TimeInterval = 0.15
@@ -172,6 +172,7 @@ open class RecordButton : UIButton {
         circleBorder.add(borderAnimations, forKey: "borderAnimations")
     }
     
+    //MARK: - gradientMask
     fileprivate func gradientMask() -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
@@ -182,6 +183,7 @@ open class RecordButton : UIButton {
         return gradientLayer
     }
     
+    //MARK: - layoutSubviews
     override open func layoutSubviews() {
         circleLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         circleLayer.position = CGPoint(x: self.bounds.midX,y: self.bounds.midY)
@@ -190,7 +192,7 @@ open class RecordButton : UIButton {
         super.layoutSubviews()
     }
     
-    
+     //MARK: - didTouchDown
     @objc open func didTouchDown(){
         self.buttonState = .recording
     }
@@ -209,7 +211,6 @@ open class RecordButton : UIButton {
             self.buttonState = .idle
         }
     }
-    
     
     /**
      Set the relative length of the circle border to the specified progress
